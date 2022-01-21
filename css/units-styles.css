@@ -1,0 +1,274 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.logo h2 {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.logo {
+  text-align: center;
+  position: fixed;
+  height: 70.4px;
+  z-index: 99;
+  top: 0;
+  width: 100%;
+  padding-top: 20px;
+  background-color: #1a1a1a;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  border-bottom: 0.1px solid #666666;
+}
+.logo img{
+  width: 32px;
+  margin: 0;
+}
+
+.units-holder {
+  background-color: #1a1a1a;
+  text-align: center;
+  z-index: 100;
+  top: 70px;
+  position: fixed;
+  width: 100%;
+  border-top: 0.1px solid #666666;
+}
+
+.units-holder a {
+  font-size: 0.9rem;
+  text-align: center;
+  width: 20%;
+  float: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 5px auto;
+  font-weight: bold;
+}
+
+.units-holder a:hover {
+  background-color: #012e3c;
+  border-radius: 10px;
+}
+
+.contents h3 {
+  margin: 0;
+  padding-left: 18px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  border-bottom: 0.1px solid #666666;
+}
+
+#navigation {
+  width: 21%;
+  height: 100%;
+  background-color: #01202a;
+  display: inline-block;
+  top: 128px;
+  position: fixed;
+  overflow-y: auto;
+  max-height: calc(100vh - 128px);
+  z-index: 100;
+
+}
+
+#navigation a {
+  list-style-type: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  display: block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#navigation a:hover {
+  background-color: black;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+  display: inline;
+  float: right;
+  position: relative;
+  top: 127px;
+  overflow-y: auto;
+  background-color: #000000;
+  width: 79%;
+  height: 100%;
+  /* max-height: calc(100vh - 128px); */
+}
+
+.subclass {
+  padding-left: 40px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 70px;
+}
+
+.subclass *{
+ scroll-margin-top: 128px;
+}
+
+.main h1 {
+  color: #cce6ff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.67;
+}
+
+.main li {
+  margin-bottom: 10px;
+}
+
+.main p, .main ul, .main li {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.67;
+  text-align: justify;
+}
+
+.main h2 {
+  color: #cce6ff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.67;
+}
+
+.main h3 {
+  color: #cce6ff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.67;
+}
+
+:target {
+  scroll-margin-top: 135px;
+}
+
+.content-images-holder {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.content-images {
+  width: 70%;
+  border-radius: 3px;
+}
+
+table {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 20px;
+  line-height: 1.67;
+  text-align: justify;
+}
+
+table th {
+  background-color: #04AA6D;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: #333333;
+}
+
+table tr:nth-child(odd) {
+  background-color: #1a1a1a;
+}
+
+.table-holder {
+  padding: 40px;
+}
+
+code {
+  font-size: 1.2rem;
+  color: crimson;
+  margin: 5px;
+}
+
+blockquote {
+  background-color: #333333;
+  border-left: 5px solid #01202a;
+  color: white;
+  margin: 15px auto 20px;
+  padding: 13px 15px 12px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+#navigation .nav-a{
+  list-style-type: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 10px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#navigation .nav-a:hover{
+  background-color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#navigation ul{
+  margin: 0;
+  padding: 0;
+}
+
+.try{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.try1{
+  padding-bottom:70px;
+}
+
+.prettyprint{
+  background-color: #333333;
+  color: white;
+  font-size: 16px;
+  padding: 20px;
+  border-radius: 10px;
+}
+pre{
+  overflow: auto;
+}

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/units-styles.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <title></title>
+</head>
+
+<body>
+
+  <div class="logo">
+    <h2>IWPT</h2>
+  </div>
+
+  <div class="units-holder">
+    <div class="try">
+      <a href="unit1.html">Unit 1- Intro To Internet</a>
+
+      <a href="unit2.html">Unit 2- DOM & XML</a>
+
+      <a href="unit3.html">Unit 3- HTML & CSS</a>
+
+      <a href="unit4.html">Unit 4- Intro to CSSL</a>
+
+      <a href="unit5.html">Unit 5- Intro to SSSL</a>
+    </div>
+  </div>
+
+
+
+
+  <div id="navigation">
+    <div class="contents">
+      <h3>Table of Contents</h3>
+    </div>
+
+    <div class="try1">
+        <a href="#intro-sssl">Introduction to SSSL</a>
+        
+        <a href="#asp-intro">Introduction to ASP</a>
+        <ul>
+          <li><a class="nav-a" href="#web-forms">Web Forms</a></li>
+          <li><a class="nav-a" href="#component">Component</a></li>
+          <li><a class="nav-a" href="#NF">.Net Framework</a></li>
+        </ul>
+        <a href="#jsp-intro">Introduction to JSP</a>
+        <ul>
+          <li><a class="nav-a" href="#features">Features of JSP</a></li>
+          <li><a class="nav-a" href="#syntax">JSP syntax</a></li>
+          <li><a class="nav-a" href="#process">Process</a></li>
+          <li><a class="nav-a" href="#pros-cons">Pros & Cons</a></li>
+        </ul>
+        <a href="#intro-php">Introduction to PHP</a>
+        <ul>
+          <li><a class="nav-a" href="#c-uses">Common uses</a></li>
+          <li><a class="nav-a" href="#charac">Characteristics</a></li>
+          
+        </ul>
+      </div>
+  </div>
+
+  <div class="main">
+   <div class="subclass">
+
+    <h1 id="intro-sssl">Introduction to Server Side Scripting Language</h1>
+    <p>Web browsers communicate with web servers using the HyperText Transfer Protocol (HTTP). When you click a link on a web page, submit a form, or run a search, an HTTP request is sent from your browser to the target server.</p>
+    <p>The request includes a URL identifying the affected resource, a method that defines the required action (for example to get, delete, or post the resource), and may include additional information encoded in URL parameters (the field-value pairs sent via a query string), as POST data (data sent by the HTTP POST method), or in associated cookies.</p>
+    <p>Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an HTTP response message. The response contains a status line indicating whether or not the request succeeded (e.g. "HTTP/1.1 200 OK" for success).</p>
+    <p>The body of a successful response to a request would contain the requested resource (e.g. a new HTML page, or an image, etc...), which could then be displayed by the web browser.</p>
+    <br>
+    <h2>Dynamic sites</h2>
+    <p>A dynamic website is one where some of the response content is generated dynamically, only when needed. On a dynamic website HTML pages are normally created by inserting data from a database into placeholders in HTML templates (this is a much more efficient way of storing large amounts of content than using static websites).</p>
+    <p>A dynamic site can return different data for a URL based on information provided by the user or stored preferences and can perform other operations as part of returning a response (e.g. sending notifications).</p>
+    <p>Most of the code to support a dynamic website must run on the server. Creating this code is known as "server-side programming" (or sometimes "back-end scripting").</p>
+    <p>Requests for dynamic resources are instead forwarded to server-side code. For "dynamic requests" the server interprets the request, reads required information from the database , combines the retrieved data with HTML templates , and sends back a response containing the generated HTML.</p>
+    <br>
+    <h2>Advantages</h2>
+    <ul>
+        <li>Efficient storage and delivery of information</li>
+        <li>Customised user experience</li>
+        <li>Controlled access to content</li>
+        <li>Store session/state information</li>
+        <li>Notifications and communication</li>
+        <li>Data analysis</li>
+    </ul>
+    <br>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+
+
+    <h1 id="asp-intro">Introduction to ASP.NET</h1>
+    <p>ASP.NET is a web development platform, which provides a programming model, a comprehensive software infrastructure and various services required to build up robust web applications for PC, as well as mobile devices.</p>
+<p>ASP.NET works on top of the HTTP protocol, and uses the HTTP commands and policies to set a browser-to-server bilateral communication and cooperation.</p>
+<p>ASP.NET is a part of Microsoft .Net platform. ASP.NET applications are compiled codes, written using the extensible and reusable components or objects present in .Net framework. These codes can use the entire hierarchy of classes in .Net framework.</p>
+<p>The ASP.NET application codes can be written in any of the following languages:</p>
+<ul>
+<li>C#</li>
+<li>Visual Basic.Net</li>
+<li>Jscript</li>
+<li>J#</li>
+</ul>
+<p>ASP.NET is used to produce interactive, data-driven web applications over the internet. It consists of a large number of controls such as text boxes, buttons, and labels for assembling, configuring, and manipulating code to create HTML pages.</p>
+<br>
+
+<h2 id="web-forms">ASP.NET Web Forms Model</h2>
+<p>ASP.NET web forms extend the event-driven model of interaction to the web applications. The browser submits a web form to the web server and the server returns a full markup page or HTML page in response.</p>
+<p>All client side user activities are forwarded to the server for stateful processing. The server processes the output of the client actions and triggers the reactions.</p>
+<p>Now, HTTP is a stateless protocol. ASP.NET framework helps in storing the information regarding the state of the application, which consists of:</p>
+<ul>
+<li>Page state</li>
+<li>Session state</li>
+</ul>
+<p>The page state is the state of the client, i.e., the content of various input fields in the web form. The session state is the collective information obtained from various pages the user visited and worked with, i.e., the overall session state. To clear the concept, let us take an example of a shopping cart.</p>
+<p>User adds items to a shopping cart. Items are selected from a page, say the items page, and the total collected items and price are shown on a different page, say the cart page. Only HTTP cannot keep track of all the information coming from various pages. ASP.NET session state and server side infrastructure keeps track of the information collected globally over a session.</p>
+<p>The ASP.NET runtime carries the page state to and from the server across page requests while generating ASP.NET runtime codes, and incorporates the state of the server side components in hidden fields.</p>
+<p>This way, the server becomes aware of the overall application state and operates in a two-tiered connected way.</p>
+<br>
+
+<h2 id="component">The ASP.NET Component Model</h2>
+<p>The ASP.NET component model provides various building blocks of ASP.NET pages. Basically it is an object model, which describes:</p>
+<ul >
+<li><p>Server side counterparts of almost all HTML elements or tags, such as &lt;form&gt; and &lt;input&gt;.</p></li>
+<li><p>Server controls, which help in developing complex user-interface. For example, the Calendar control or the Gridview control.</p></li>
+</ul>
+<p>ASP.NET is a technology, which works on the .Net framework that contains all web-related functionalities. The .Net framework is made of an object-oriented hierarchy. An ASP.NET web application is made of pages. When a user requests an ASP.NET page, the IIS delegates the processing of the page to the ASP.NET runtime system.</p>
+<p>The ASP.NET runtime transforms the .aspx page into an instance of a class, which inherits from the base class page of the .Net framework. Therefore, each ASP.NET page is an object and all its components i.e., the server-side controls are also objects.</p>
+<br>
+
+<h2 id="NF">Components of .Net Framework 3.5</h2>
+<p>The following table describes the components of the .Net framework 3.5 and the job they perform:</p>
+<div class="table-holder">
+    <table>
+        <tr>
+        <th>Components and their Description</th>
+        </tr>
+        <tr>
+        <td>
+        <p><b>(1) Common Language Runtime or CLR</b></p>
+        <p>It performs memory management, exception handling, debugging, security checking, thread execution, code execution, code safety, verification, and compilation. The code that is directly managed by the CLR is called the managed code. When the managed code is compiled, the compiler converts the source code into a CPU independent intermediate language (IL) code. A Just In Time(JIT) compiler compiles the IL code into native code, which is CPU specific.</p></td>
+        </tr>
+        <tr>
+        <td>
+        <p><b>(2) .Net Framework Class Library</b></p>
+        <p>It contains a huge library of reusable types. classes, interfaces, structures, and enumerated values, which are collectively called types.</p></td>
+        </tr>
+        <tr>
+        <td>
+        <p><b>(3) Common Language Specification</b></p>
+        <p>It contains the specifications for the .Net supported languages and implementation of language integration.</p></td>
+        </tr>
+        <tr>
+        <td>
+        <p><b>(4) Common Type System</b></p>
+        <p>It provides guidelines for declaring, using, and managing types at runtime, and cross-language communication.</p></td>
+        </tr>
+        <tr>
+        <td>
+        <p><b>(5) Metadata and Assemblies</b></p>
+        <p>Metadata is the binary information describing the program, which is either stored in a portable executable file (PE) or in the memory. Assembly is a logical unit consisting of the assembly manifest, type metadata, IL code, and a set of resources like image files.</p></td>
+        </tr>
+        <tr>
+        <td>
+        <p><b>(6) Windows Forms</b></p>
+        <p>Windows Forms contain the graphical representation of any window displayed in the application.</p></td>
+        </tr>
+        <tr>
+        <td>
+        <p><b>(7) ASP.NET and ASP.NET AJAX</b></p>
+        <p>ASP.NET is the web development model and AJAX is an extension of ASP.NET for developing and implementing AJAX functionality. ASP.NET AJAX contains the components that allow the developer to update data on a website without a complete reload of the page.</p></td>
+        </tr>
+        <tr>
+        <td>
+        <p><b>(8) ADO.NET</b></p>
+        <p>It is the technology used for working with data and databases. It provides access to data sources like SQL server, OLE DB, XML etc. The ADO.NET allows connection to data sources for retrieving, manipulating, and updating data.</p></td>
+        </tr>
+        <tr>
+        <td>
+        <p><b>(9) Windows Workflow Foundation (WF)</b></p>
+        <p>It helps in building workflow-based applications in Windows. It contains activities, workflow runtime, workflow designer, and a rules engine.</p></td>
+        </tr>
+        <tr>
+        <td>
+        <p><b>(10) Windows Presentation Foundation</b></p>
+        <p>It provides a separation between the user interface and the business logic. It helps in developing visually stunning interfaces using documents, media, two and three dimensional graphics, animations, and more.</p></td>
+        </tr>
+        <tr>
+        <td>
+        <p><b>(11) Windows Communication Foundation (WCF)</b></p>
+        <p>It is the technology used for building and executing connected systems. </p></td>
+        </tr>
+        <tr>
+        <td>
+        <p><b>(12) Windows CardSpace</b></p>
+        <p>It provides safety for accessing resources and sharing personal information on the internet.</p></td>
+        </tr>
+        <tr>
+        <td>
+        <p><b>(13) LINQ</b></p>
+        <p>It imparts data querying capabilities to .Net languages using a syntax which is similar to the tradition query language SQL.</p></td>
+        </tr>
+        </table>
+</div>
+<br>
+
+<!-- ----------------------------------------------------------------------------------------------------------------------------------- -->
+
+<h1 id="jsp-intro">Introduction to JSP</h1>
+<p>JSP technology is used to create web application just like Servlet technology. It can be thought of as an extension to Servlet because it provides more functionality than servlet such as expression language, JSTL, etc.</p>
+<p>A JSP page consists of HTML tags and JSP tags. The JSP pages are easier to maintain than Servlet because we can separate designing and development. It provides some additional features such as Expression Language, Custom Tags, etc.</p>
+<br>
+
+<h2 id="features">Features of JSP</h2>
+<ul>
+    <li><b>Coding in JSP is easy</b> :- As it is just adding JAVA code to HTML/XML.</li>
+    <li><b>Reduction in the length of Code</b> :- In JSP we use action tags, custom tags etc.</li>
+    <li><b>Connection to Database is easier</b> :-It is easier to connect website to database and allows to read or write data easily to the database.</li>
+    <li><b>Make Interactive websites</b> :- In this we can create dynamic web pages which helps user to interact in real time environment.</li>
+    <li><b>Portable, Powerful, flexible and easy to maintain</b> :- as these are browser and server independent.</li>
+    <li><b>No Redeployment and No Re-Compilation</b> :- It is dynamic, secure and platform independent so no need to re-compilation.</li>
+    <li><b>Extension to Servlet</b> :- as it has all features of servlets, implicit objects and custom tags</li>
+</ul>
+<br>
+<h2 id="syntax">JSP syntax</h2>
+<p>Syntax available in JSP are following</p>
+<br>
+<h3>Declaration Tag</h3>
+<p>It is used to declare variables.</p>
+<pre class="prettyprint">
+  Syntax:- 
+&lt;%!  Dec var  %&gt;
+Example:-
+&lt;%! int var=10; %&gt;
+</pre>
+<br>
+<h3>Java Scriplets</h3>
+<p>It allows us to add any number of JAVA code, variables and expressions.</p>
+<pre class="prettyprint">
+  Syntax:- 
+&lt;% java code %&gt;
+</pre>
+<br>
+<h3>JSP Expression</h3>
+<p>It evaluates and convert the expression to a string.</p>
+<pre class="prettyprint">
+  Syntax:- 
+&lt;%= expression %&gt; 
+ Example:- 
+&lt;% num1 = num1+num2 %&gt;
+</pre>
+<br>
+<h3>JAVA Comments</h3>
+<p>It contains the text that is added for information which has to be ignored.</p>
+<pre class="prettyprint">
+  Syntax:- 
+&lt;% -- JSP Comments %&gt;
+</pre>
+<br>
+
+
+<h2 id="process">Process of Execution</h2>
+<p>Steps for Execution of JSP are following:-</p>
+<ul>
+    <li>Create html page from where request will be sent to server eg try.html.</li>
+    <li>To handle to request of user next is to create .jsp file Eg. new.jsp</li>
+    <li>Create project folder structure.</li>
+    <li>Create XML file eg my.xml.</li>
+    <li>Create WAR file.</li>
+    <li>Start Tomcat</li>
+    <li>Run Application</li>
+</ul>
+
+<div class="content-images-holder">
+  <img class="content-images" src="images/jsp.jpg" alt="">
+</div>
+
+<br>
+
+<h3>Example of Hello World</h3>
+<p>We will make one .html file and .jsp file</p>
+<pre class="prettyprint">
+  demo.jsp
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;
+&lt;title&gt;Hello World - JSP tutorial&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;%= "Hello World!" %&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h2 id="pros-cons">Pros of using JSP</h2>
+<ul>
+    <li>It does not require advanced knowledge of JAVA</li>
+    <li>It is capable of handling exceptions</li>
+    <li>Easy to use and learn</li>
+    <li>It can tags which are easy to use and understand</li>
+    <li>Implicit objects are there which reduces the length of code</li>
+    <li>It is suitable for both JAVA and non JAVA programmer</li>
+</ul>
+
+<h2>Cons of using JSP</h2>
+<ul>
+    <li>Difficult to debug for errors.</li>
+    <li>First time access leads to wastage of time</li>
+    <li>Its output is HTML which lacks features.</li>
+</ul>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<h1 id="intro-php">Introduction to PHP</h1>
+<p>PHP started out as a small open source project that evolved as more and more people found out how useful it was. Rasmus Lerdorf unleashed the first version of PHP way back in 1994.</p>
+<ul>
+<li><p>PHP is a recursive acronym for "PHP: Hypertext Preprocessor".</p></li>
+<li><p>PHP is a server side scripting language that is embedded in HTML. It is used to manage dynamic content, databases, session tracking, even build entire e-commerce sites.</p></li>
+<li><p>It is integrated with a number of popular databases, including MySQL, PostgreSQL, Oracle, Sybase, Informix, and Microsoft SQL Server.</p></li>
+<li><p>PHP is pleasingly zippy in its execution, especially when compiled as an Apache module on the Unix side. The MySQL server, once started, executes even very complex queries with huge result sets in record-setting time.</p></li>
+<li><p>PHP supports a large number of major protocols such as POP3, IMAP, and LDAP. PHP4 added support for Java and distributed object architectures (COM and CORBA), making n-tier development a possibility for the first time.</p></li>
+<li><p>PHP is forgiving: PHP language tries to be as forgiving as possible.</p></li>
+<li><p>PHP Syntax is C-Like.</p></li>
+</ul>
+<br>
+<h2 id="c-uses">Common uses of PHP</h2>
+<ul >
+<li><p>PHP performs system functions, i.e. from files on a system it can create, open, read, write, and close them.</p></li>
+<li><p>PHP can handle forms, i.e. gather data from files, save data to a file, through email you can send data, return data to the user.</p></li>
+<li><p>You add, delete, modify elements within your database through PHP.</p></li>
+<li><p>Access cookies variables and set cookies.</p></li>
+<li><p>Using PHP, you can restrict users to access some pages of your website.</p></li>
+<li><p>It can encrypt data.</p></li>
+</ul>
+<br>
+<h2 id="charac">Characteristics of PHP</h2>
+<p>Five important characteristics make PHP's practical nature possible &minus;</p>
+<ul >
+<li>Simplicity</li>
+<li>Efficiency</li>
+<li>Security</li>
+<li>Flexibility</li>
+<li>Familiarity</li>
+</ul>
+<br>
+<h2 id="eg-script">"Hello World" Script in PHP</h2>
+<p>To get a feel for PHP, first start with simple PHP scripts. Since "Hello, World!" is an essential example, first we will create a friendly little "Hello, World!" script.</p>
+<p>As mentioned earlier, PHP is embedded in HTML.  That means that in amongst your normal HTML (or XHTML if you're cutting-edge) you'll have PHP statements like this &minus;</p>
+<pre class="prettyprint notranslate">
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;title&gt;Hello World&lt;/title&gt;
+   &lt;/head&gt;
+   
+   &lt;body&gt;
+      &lt;?php echo "Hello, World!";?&gt;
+   &lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>It will produce following result &minus;</p>
+
+<pre class="prettyprint notranslate">
+Hello, World!
+</pre>
+<p>If you examine the HTML output of the above example, you'll notice that the PHP code is not present in the file sent from the server to your Web browser. All of the PHP present in the Web page is processed and stripped from the page; the only thing returned to the client from the Web server is pure HTML output.</p>
+<p>All PHP code must be included inside one of the three special markup tags ATE are recognised by the PHP Parser.</p>
+<pre class="prettyprint notranslate">
+&lt;?php PHP code goes here ?&gt;
+
+&lt;?    PHP code goes here ?&gt;
+
+&lt;script language = "php"&gt; PHP code goes here &lt;/script&gt;
+</pre>
+<br>
+
+
+
+
+
+<!-- ---------------------------write above this--------------------------------------------------- -->
+
+   </div>
+
+
+  </div>
+
+</body>
+
+</html>

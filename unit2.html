@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/units-styles.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <title></title>
+</head>
+
+<body>
+
+  <div class="logo">
+    <h2>IWPT</h2>
+  </div>
+
+  <div class="units-holder">
+    <div class="try">
+      <a href="unit1.html">Unit 1- Intro To Internet</a>
+
+      <a href="unit2.html">Unit 2- DOM & XML</a>
+
+      <a href="unit3.html">Unit 3- HTML & CSS</a>
+
+      <a href="unit4.html">Unit 4- Intro to CSSL</a>
+
+      <a href="unit5.html">Unit 5- Intro to SSSL</a>
+    </div>
+
+  </div>
+
+  <div id="navigation">
+    <div class="contents">
+      <h3>Table of Contents</h3>
+    </div>
+    <div class="try1">
+      <a href="#intro">Introduction to DOM</a>
+      <ul>
+        <li><a class="nav-a" href="#properties">Properties of DOM</a></li>
+        <li><a class="nav-a" href="#levels">Levels of DOM</a></li>
+      </ul>
+      <a href="#objects">Objects in DOM</a>
+      <a href="#xml-intro">Introduction to XML</a>
+      <ul>
+        <li> <a class="nav-a" href="#syntax">XML - Syntax</a> </li>
+        <li> <a class="nav-a" href="#declaration">XML - Declaration</a> </li>
+        <li> <a class="nav-a" href="#text">XML - Text</a> </li>
+        <li> <a class="nav-a" href="#documents">XML - Documents</a> </li>
+        <li> <a class="nav-a" href="#xml-tags">XML - Tags</a> </li>
+        <li> <a class="nav-a" href="#xml-elements">XML - Elements</a> </li>
+        <li> <a class="nav-a" href="#xml-attri">XML - Attributes</a> </li>
+        <li> <a class="nav-a" href="#xml-comments">XML - Comments</a> </li>
+        <li> <a class="nav-a" href="#character-entities">XML - Character Entities</a> </li>
+        <li> <a class="nav-a" href="#cdata">XML - CDATA Sections</a> </li>
+        <li> <a class="nav-a" href="#whitespaces">XML - WhiteSpaces</a> </li>
+        <li> <a class="nav-a" href="#processing">XML - Processing</a> </li>
+        <li> <a class="nav-a" href="#encoding">XML - Encoding</a> </li>
+        <li> <a class="nav-a" href="#validation">XML - Validation</a> </li>
+      </ul>
+      <a href="#applications">Applications of XML</a>
+    </div>
+
+  </div>
+
+  <div class="main">
+    <div class="subclass">
+      <div id="intro">
+        <h1 id="intro">Introduction to DOM</h1>
+        
+        <p>The Document Object Model (DOM) is a programming interface for HTML and XML(Extensible markup language) documents. It defines the logical structure of documents and the way a document is accessed and manipulated.</p>
+        <p>Note: It is called a Logical structure because DOM doesn’t specify any relationship between objects. </p>
+        <p>DOM is a way to represent the webpage in a structured hierarchical way so that it will become easier for programmers and users to glide through the document. With DOM, we can easily access and manipulate tags, IDs, classes, Attributes, or
+          Elements using commands or methods provided by the Document object.</p>
+        <br>
+        <h2>Why DOM is required</h2>
+        <p>HTML is used to structure the web pages and Javascript is used to add behavior to our web pages. When an HTML file is loaded into the browser, the javascript can not understand the HTML document directly. So, a corresponding document is
+          created(DOM). DOM is basically the representation of the same HTML document but in a different format with the use of objects. Javascript interprets DOM easily i.e javascript can not understand the tags (&lt;h1&gt; H &lt;/h1&gt;) in HTML
+          document but can understand object h1 in DOM. Now, Javascript can access each of the objects (h1, p, etc) by using different functions. </p>
+        <br>
+        <h2>Structure of DOM</h2>
+        <p>DOM can be thought of as a Tree or Forest(more than one tree). The term structure model is sometimes used to describe the tree-like representation of a document. One important property of DOM structure models is structural isomorphism: if
+          any two DOM implementations are used to create a representation of the same document, they will create the same structure model, with precisely the same objects and relationships.</p>
+        <br>
+        
+          <h2 id="properties">Properties of DOM</h2>
+          <p>Let’s see the properties of the document object that can be accessed and modified by the document object.</p>
+          <ul>
+            <li>Window Object: Window Object is always at top of the hierarchy.</li>
+            <li>Document object: When an HTML document is loaded into a window, it becomes a document object.</li>
+            <li>Form Object: It is represented by form tags.</li>
+            <li>Link Object: It is represented by link tags.</li>
+            <li>Anchor Object: It is represented by a href tags.</li>
+            <li>Form Control Elements:: Form can have many control elements such as text fields, buttons, radio buttons, and checkboxes, etc.</li>
+          </ul>
+        
+        <br>
+        <h2>Methods of Document Object:</h2>
+        <ul>
+          <li>write(“string”): Writes the given string on the document.</li>
+          <li>getElementById(): returns the element having the given id value.</li>
+          <li>getElementsByName(): returns all the elements having the given name value.</li>
+          <li>getElementsByTagName(): returns all the elements having the given tag name.</li>
+          <li>getElementsByClassName(): returns all the elements having the given class name.</li>
+        </ul>
+        <br>
+        
+          <h2 id="levels">Levels of DOM </h2>
+
+          <ul>
+            <li>Level 0: Provides a low-level set of interfaces.</li>
+            <li>Level 1: DOM level 1 can be described in two parts: CORE and HTML.</li>
+            <ul>
+              <li>CORE provides low-level interfaces that can be used to represent any structured document.</li>
+              <li>HTML provides high-level interfaces that can be used to represent HTML documents.</li>
+            </ul>
+            <li>Level 2: consists of six specifications: CORE2, VIEWS, EVENTS, STYLE, TRAVERSAL, and RANGE.</li>
+            <ul>
+              <li>CORE2: extends the functionality of CORE specified by DOM level 1.</li>
+              <li>VIEWS: views allows programs to dynamically access and manipulate the content of the document.</li>
+              <li>EVENTS: Events are scripts that are either executed by the browser when the user reacts to the web page.</li>
+              <li>STYLE: allows programs to dynamically access and manipulate the content of style sheets.</li>
+              <li>TRAVERSAL: This allows programs to dynamically traverse the document.</li>
+              <li>RANGE: This allows programs to dynamically identify a range of content in the document.</li>
+            </ul>
+            <li>Level 3: consists of five different specifications: CORE3, LOAD and SAVE, VALIDATION, EVENTS, and XPATH.</li>
+            <ul>
+              <li>CORE3: extends the functionality of CORE specified by DOM level 2.</li>
+              <li>LOAD and SAVE: This allows the program to dynamically load the content of the XML document into the DOM document and save the DOM Document into an XML document by serialization.</li>
+              <li>VALIDATION: This allows the program to dynamically update the content and structure of the document while ensuring the document remains valid.</li>
+              <li>EVENTS: extends the functionality of Events specified by DOM Level 2.</li>
+              <li>XPATH: XPATH is a path language that can be used to access the DOM tree.</li>
+            </ul>
+          </ul>
+
+        
+
+      </div>
+      <br>
+      
+        <h1 id="objects">The Document Object</h1>
+        <p>When an HTML document is loaded into a web browser, it becomes a document object.</p>
+        <p>The document object is the root node of the HTML document and the "owner" of all other nodes: (element nodes, text nodes, attribute nodes, and comment nodes).</p>
+        <p>The document object provides properties and methods to access all node objects, from within JavaScript.</p>
+        <p>The document object is accessed with:</p>
+        <p><code>window.document</code> or just <code>document</code></p>
+        <br>
+        <h2>Document Object Properties and Methods</h2>
+        <p>The following properties and methods can be used on HTML documents:</p>
+        <br>
+        <div class="table-holder">
+          <table>
+
+            <tr>
+              <th>Property / Method</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>activeElement</td>
+              <td>Returns the currently focused element in the document</td>
+            </tr>
+            <tr>
+              <td>addEventListener()</td>
+              <td>Attaches an event handler to the document</td>
+            </tr>
+            <tr>
+              <td>adoptNode()</td>
+              <td>Adopts a node from another document</td>
+            </tr>
+            <tr>
+              <td>anchors</td>
+              <td>Deprecated</td>
+            </tr>
+            <tr>
+              <td>applets</td>
+              <td>Deprecated</td>
+            </tr>
+            <tr>
+              <td>baseURI</td>
+              <td>Returns the absolute base URI of a document</td>
+            </tr>
+            <tr>
+              <td>body</td>
+              <td>Sets or returns the document's body (the &lt;body&gt; element)</td>
+            </tr>
+            <tr>
+              <td>close()</td>
+              <td>Closes the output stream previously opened with document.open()</td>
+            </tr>
+            <tr>
+              <td>cookie</td>
+              <td>Returns all name/value pairs of cookies in the document</td>
+            </tr>
+            <tr>
+              <td>charset</td>
+              <td>Deprecated</td>
+            </tr>
+            <tr>
+              <td>characterSet</td>
+              <td>Returns the character encoding for the document</td>
+            </tr>
+            <tr>
+              <td>createAttribute()</td>
+              <td>Creates an attribute node</td>
+            </tr>
+            <tr>
+              <td>createComment()</td>
+              <td>Creates a Comment node with the specified text</td>
+            </tr>
+            <tr>
+              <td>createDocumentFragment()</td>
+              <td>Creates an empty DocumentFragment node</td>
+            </tr>
+            <tr>
+              <td>createElement()</td>
+              <td>Creates an Element node</td>
+            </tr>
+            <tr>
+              <td>createEvent()</td>
+              <td>Creates a new event</td>
+            </tr>
+            <tr>
+              <td>createTextNode()</td>
+              <td>Creates a Text node</td>
+            </tr>
+            <tr>
+              <td>defaultView</td>
+              <td>Returns the window object associated with a document, or null if none is available.</td>
+            </tr>
+            <tr>
+              <td>designMode</td>
+              <td>Controls whether the entire document should be editable or not.</td>
+            </tr>
+            <tr>
+              <td>doctype</td>
+              <td>Returns the Document Type Declaration associated with the document</td>
+            </tr>
+            <tr>
+              <td>documentElement</td>
+              <td>Returns the Document Element of the document (the &lt;html&gt; element)</td>
+            </tr>
+            <tr>
+              <td>>documentMode</td>
+              <td>Returns the mode used by the browser to render the document</td>
+            </tr>
+            <tr>
+              <td>documentURI</td>
+              <td>Sets or returns the location of the document</td>
+            </tr>
+            <tr>
+              <td>domain</td>
+              <td>Returns the domain name of the server that loaded the document</td>
+            </tr>
+            <tr>
+              <td>domConfig</td>
+              <td>Deprecated</td>
+            </tr>
+            <tr>
+              <td>embeds</td>
+              <td>Returns a collection of all &lt;embed&gt; elements the document</td>
+            </tr>
+            <tr>
+              <td>execCommand()</td>
+              <td>Invokes the specified clipboard operation on the element currently having focus.</td>
+            </tr>
+            <tr>
+              <td>forms</td>
+              <td>Returns a collection of all &lt;form&gt; elements in the document</td>
+            </tr>
+            <tr>
+              <td>fullscreenElement</td>
+              <td>Returns the current element that is displayed in fullscreen mode</td>
+            </tr>
+            <tr>
+              <td>fullscreenEnabled()</td>
+              <td>Returns a Boolean value indicating whether the document can be viewed in fullscreen mode</td>
+            </tr>
+            <tr>
+              <td>getElementById()</td>
+              <td>Returns the element that has the ID attribute with the specified value</td>
+            </tr>
+            <tr>
+              <td>getElementsByClassName()</td>
+              <td>Returns a HTMLCollection containing all elements with the specified class name</td>
+            </tr>
+            <tr>
+              <td>getElementsByName()</td>
+              <td>Returns a HTMLCollection containing all elements with a specified name</td>
+            </tr>
+            <tr>
+              <td>getElementsByTagName()</td>
+              <td>Returns a HTMLCollection containing all elements with the specified tag name</td>
+            </tr>
+            <tr>
+              <td>hasFocus()</td>
+              <td>Returns a Boolean value indicating whether the document has focus</td>
+            </tr>
+            <tr>
+              <td>head</td>
+              <td>Returns the &lt;head&gt; element of the document</td>
+            </tr>
+            <tr>
+              <td>images</td>
+              <td>Returns a collection of all &lt;img&gt; elements in the document</td>
+            </tr>
+            <tr>
+              <td>implementation</td>
+              <td>Returns the DOMImplementation object that handles this document</td>
+            </tr>
+            <tr>
+              <td>importNode()</td>
+              <td>Imports a node from another document</td>
+            </tr>
+            <tr>
+              <td>inputEncoding</td>
+              <td>Deprecated</td>
+            </tr>
+            <tr>
+              <td>lastModified</td>
+              <td>Returns the date and time the document was last modified</td>
+            </tr>
+            <tr>
+              <td>links</td>
+              <td>Returns a collection of all &lt;a&gt; and &lt;area&gt; elements in the document that have a href attribute</td>
+            </tr>
+            <tr>
+              <td>normalize()</td>
+              <td>Removes empty Text nodes, and joins adjacent nodes</td>
+            </tr>
+            <tr>
+              <td>normalizeDocument()</td>
+              <td>Removes empty Text nodes, and joins adjacent nodes</td>
+            </tr>
+            <tr>
+              <td>open()</td>
+              <td>Opens an HTML output stream to collect output from document.write()</td>
+            </tr>
+            <tr>
+              <td>querySelector()</td>
+              <td>Returns the first element that matches a specified CSS selector(s) in the document</td>
+            </tr>
+            <tr>
+              <td>querySelectorAll()</td>
+              <td>Returns a static NodeList containing all elements that matches a specified CSS selector(s) in the document</td>
+            </tr>
+            <tr>
+              <td>readyState</td>
+              <td>Returns the (loading) status of the document</td>
+            </tr>
+            <tr>
+              <td>referrer</td>
+              <td>Returns the URL of the document that loaded the current document</td>
+            </tr>
+            <tr>
+              <td>removeEventListener()</td>
+              <td>Removes an event handler from the document (that has been attached with the <a href="met_document_addeventlistener.asp">addEventListener()</a> method)</td>
+            </tr>
+            <tr>
+              <td>renameNode()</td>
+              <td>Renames the specified node</td>
+            </tr>
+            <tr>
+              <td>scripts</td>
+              <td>Returns a collection of &lt;script&gt; elements in the document</td>
+            </tr>
+            <tr>
+              <td>strictErrorChecking</td>
+              <td>Sets or returns whether error-checking is enforced or not</td>
+            </tr>
+            <tr>
+              <td>title</td>
+              <td>Sets or returns the title of the document</td>
+            </tr>
+            <tr>
+              <td>URL</td>
+              <td>Returns the full URL of the HTML document</td>
+            </tr>
+            <tr>
+              <td>write()</td>
+              <td>Writes HTML expressions or JavaScript code to a document</td>
+            </tr>
+            <tr>
+              <td>writeln()</td>
+              <td>Same as write(), but adds a newline character after each statement</td>
+            </tr>
+
+          </table>
+        </div>
+      
+      <br>
+      
+        <h1 id="xml-intro">Introduction to XML</h1>
+        <p>XML stands for Extensible Markup Language. It is a text-based markup language derived from Standard Generalized Markup Language (SGML).</p>
+        <p>XML tags identify the data and are used to store and organize the data, rather than specifying how to display it like HTML tags, which are used to display the data. XML is not going to replace HTML in the near future, but it introduces new
+          possibilities by adopting many successful features of HTML.</p>
+        <p>There are three important characteristics of XML that make it useful in a variety of systems and solutions −</p>
+        <ul>
+          <li>XML is extensible − XML allows you to create your own self-descriptive tags, or language, that suits your application.</li>
+          <li>XML carries the data, does not present it − XML allows you to store the data irrespective of how it will be presented.</li>
+          <li>XML is a public standard − XML was developed by an organization called the World Wide Web Consortium (W3C) and is available as an open standard.</li>
+        </ul>
+      
+      <br>
+
+      <h2>XML Usage</h2>
+      <p>A short list of XML usage says it all −</p>
+      <ul>
+        <li>
+          <p>XML can work behind the scene to simplify the creation of HTML documents for large web sites.</p>
+        </li>
+        <li>
+          <p>XML can be used to exchange the information between organizations and systems.</p>
+        </li>
+        <li>
+          <p>XML can be used for offloading and reloading of databases.</p>
+        </li>
+        <li>
+          <p>XML can be used to store and arrange the data, which can customize your data handling needs.</p>
+        </li>
+        <li>
+          <p>XML can easily be merged with style sheets to create almost any desired output.</p>
+        </li>
+        <li>
+          <p>Virtually, any type of data can be expressed as an XML document.</p>
+        </li>
+      </ul>
+
+      <br>
+
+      <h2>Is XML a Programming Language?</h2>
+      <p>A programming language consists of grammar rules and its own vocabulary which is used to create computer programs. These programs instruct the computer to perform specific tasks. XML does not qualify to be a programming language as it does
+        not perform any computation or algorithms. It is usually stored in a simple text file and is processed by special software that is capable of interpreting XML.</p>
+
+
+      <br>
+      
+        <h1 id="syntax">XML - Syntax</h1>
+        <p> Following is a complete XML document −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?xml version = "1.0"?&gt;
+          &lt;contact-info&gt;
+             &lt;name&gt;Tanmay Patil&lt;/name&gt;
+             &lt;company&gt;TutorialsPoint&lt;/company&gt;
+             &lt;phone&gt;(011) 123-4567&lt;/phone&gt;
+          &lt;/contact-info&gt;
+          </pre>
+        <p>There are two kinds of information in the above example −</p>
+        <ul>
+          <li>Markup, like &lt;contact-info&gt;</li>
+          <li>The text, or the character data, Tutorials Point and (040) 123-4567.</li>
+        </ul>
+        <p>The following diagram depicts the syntax rules to write different types of markup and text in an XML document.</p>
+        <div class="content-images-holder">
+          <img class="content-images" src="images/syntaxrules.png" alt="">
+        </div>
+      
+
+
+      <br>
+
+      
+        <h1 id="declaration">XML - Declaration</h1>
+        <p><b>XML declaration</b> contains details that prepare an XML processor to parse the XML document. It is optional, but when used, it must appear in the first line of the XML document.</p>
+
+      
+      <br>
+      
+        <h2>Syntax</h2>
+        <p>Following syntax shows XML declaration −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?xml
+             version = "version_number"
+             encoding = "encoding_declaration"
+             standalone = "standalone_status"
+          ?&gt;
+          </pre>
+        <p>Each parameter consists of a parameter name, an equals sign (=), and parameter value inside a quote. Following table shows the above syntax in detail −</p>
+        <br>
+        <div class="table-holder">
+          <table>
+            <tr>
+              <th style="width:20%">Parameter</th>
+              <th>Parameter_value</th>
+              <th>Parameter_description</th>
+            </tr>
+            <tr>
+              <td>Version</td>
+              <td>1.0</td>
+              <td>Specifies the version of the XML standard used.</td>
+            </tr>
+            <tr>
+              <td>Encoding</td>
+              <td>UTF-8, UTF-16, ISO-10646-UCS-2, ISO-10646-UCS-4, ISO-8859-1 to ISO-8859-9, ISO-2022-JP, Shift_JIS, EUC-JP</td>
+              <td>It defines the character encoding used in the document. UTF-8 is the default encoding used.</td>
+            </tr>
+            <tr>
+              <td>Standalone</td>
+              <td>yes or no</td>
+              <td>It informs the parser whether the document relies on the information from an external source, such as external document type definition (DTD), for its content. The default value is set to <i>no</i>. Setting it to <i>yes</i> tells
+                the processor there are no external declarations required for parsing the document.</td>
+            </tr>
+          </table>
+        </div>
+      
+      <br>
+      
+        <h2>Rules</h2>
+        <p>An XML declaration should abide with the following rules −</p>
+        <ul>
+          <li>
+            <p>If the XML declaration is present in the XML, it must be placed as the first line in the XML document.</p>
+          </li>
+          <li>
+            <p>If the XML declaration is included, it must contain version number attribute.</p>
+          </li>
+          <li>
+            <p>The Parameter names and values are case-sensitive.</p>
+          </li>
+          <li>
+            <p>The names are always in lower case.</p>
+          </li>
+          <li>
+            <p>The order of placing the parameters is important. The correct order is: <i>version, encoding and standalone.</i></p>
+          </li>
+          <li>
+            <p>Either single or double quotes may be used.</p>
+          </li>
+          <li>
+            <p>The XML declaration has no closing tag i.e. <b>&lt;/?xml&gt;</b></p>
+          </li>
+        </ul>
+        <br>
+        <h3>XML Declaration Examples</h3>
+        <p>Following are few examples of XML declarations:</p>
+        <p>XML declaration with no parameters −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?xml &gt;
+          </pre>
+        <p>XML declaration with version definition −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?xml version = "1.0"&gt;
+          </pre>
+        <p>XML declaration with all parameters defined −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?xml version = "1.0" encoding = "UTF-8" standalone = "no" ?&gt;
+          </pre>
+        <p>XML declaration with all parameters defined in single quotes −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?xml version = '1.0' encoding = 'iso-8859-1' standalone = 'no' ?&gt;
+          </pre>
+      
+      <br>
+
+        
+
+      
+      
+      <h1 id="text">XML Text</h1>
+      <p>The names of XML-elements and XML-attributes are case-sensitive, which means the name of start and end elements need to be written in the same case. To avoid character encoding problems, all XML files should be saved as Unicode UTF-8 or
+        UTF-16 files.</p>
+
+      <p>Whitespace characters like blanks, tabs and line-breaks between XML-elements and between the XML-attributes will be ignored.</p>
+      <p>Some characters are reserved by the XML syntax itself. Hence, they cannot be used directly. To use them, some replacement-entities are used, which are listed below −</p>
+
+
+
+      <br>
+      <div class="table-holder">
+        <table class="table table-bordered">
+          <tr>
+            <th>Not Allowed Character </th>
+            <th>Replacement Entity</th>
+            <th>Character Description</th>
+          </tr>
+          <tr>
+            <td>&lt;</td>
+            <td>&amp;lt;</td>
+            <td>less than</td>
+          </tr>
+          <tr>
+            <td>&gt;</td>
+            <td>&amp;gt;</td>
+            <td>greater than</td>
+          </tr>
+          <tr>
+            <td>&amp;</td>
+            <td>&amp;amp;</td>
+            <td>ampersand</td>
+          </tr>
+          <tr>
+            <td>'</td>
+            <td>&amp;apos;</td>
+            <td>apostrophe</td>
+          </tr>
+          <tr>
+            <td>"</td>
+            <td>&amp;quot;</td>
+            <td>quotation mark</td>
+          </tr>
+        </table>
+      </div>
+      <br>
+
+     
+        <h1 id="documents">XML - Documents</h1>
+        <p>An XML <i>document</i> is a basic unit of XML information composed of elements and other markup in an orderly package. An XML <i>document</i> can contains wide variety of data. For example, database of numbers, numbers representing
+          molecular structure or a mathematical equation.</p>
+        <br>
+        <h2>XML Document Example</h2>
+        <p>A simple document is shown in the following example −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?xml version = "1.0"?&gt;
+          &lt;contact-info&gt;
+             &lt;name&gt;Tanmay Patil&lt;/name&gt;
+             &lt;company&gt;TutorialsPoint&lt;/company&gt;
+             &lt;phone&gt;(011) 123-4567&lt;/phone&gt;
+          &lt;/contact-info&gt;
+          </pre>
+        <p>The following image depicts the parts of XML document.</p>
+        <div class="content-images-holder">
+          <img class="content-images" src="images/xml_document.jpg" alt="">
+        </div>
+        <br>
+
+        <h2>Document Prolog Section</h2>
+        <p><b>Document Prolog</b> comes at the top of the document, before the root element. This section contains −</p>
+        <ul>
+          <li>XML declaration</li>
+          <li>Document type declaration</li>
+        </ul>
+      
+      <br>
+      <div class="doc-elements">
+        <h2>Document Elements Section</h2>
+        <p><b>Document Elements</b> are the building blocks of XML. These divide the document into a hierarchy of sections, each serving a specific purpose. You can separate a document into multiple sections so that they can be rendered differently,
+          or used by a search engine. The elements can be containers, with a combination of text and other elements.</p>
+
+      </div>
+      <br>
+      
+      
+        <h1 id="xml-tags">XML - Tags</h1>
+        <p><b>XML tags</b> form the foundation of XML. They define the scope of an element in XML. They can also be used to insert comments, declare settings required for parsing
+          the environment, and to insert special instructions.</p>
+        <p>We can broadly categorize XML tags as follows −</p>
+
+        <br>
+        <h2>Start Tag</h2>
+        <p>The beginning of every non-empty XML element is marked by a start-tag. Following is an example of start-tag −</p>
+        <pre class="prettyprint notranslate">
+          &lt;address&gt;
+          </pre>
+        <br>
+        <h2>End Tag</h2>
+        <p>Every element that has a start tag should end with an end-tag. Following is an example of end-tag −</p>
+        <pre class="prettyprint notranslate">
+          &lt;/address&gt;
+          </pre>
+        <p>Note, that the end tags include a solidus ("/") before the name of an element.</p>
+        <br>
+        <h2>Empty Tag</h2>
+        <p>The text that appears between start-tag and end-tag is called content. An element which has no content is termed as empty. An empty element can be represented in two ways as follows −</p>
+        <p>A start-tag immediately followed by an end-tag as shown below −</p>
+        <pre class="prettyprint notranslate">
+          &lt;hr&gt;&lt;/hr&gt;
+          </pre>	
+        <p>A complete empty-element tag is as shown below −</p>
+        <pre class="prettyprint notranslate">
+          &lt;hr /&gt;
+          </pre>	
+        <p>Empty-element tags may be used for any element which has no content.</p>
+        <br>
+        <h2>XML Tags Rules</h2>
+        <p>Following are the rules that need to be followed to use XML tags −</p>
+        <br>
+        <h3>Rule 1</h3>
+        <p>XML tags are case-sensitive. Following line of code is an example of wrong syntax &lt;/Address&gt;, because of the case difference in two tags, which is treated as erroneous syntax in XML.</p>
+        <pre class="prettyprint notranslate">
+          &lt;address&gt;This is wrong syntax&lt;/Address&gt;
+          </pre>
+        <p>Following code shows a correct way, where we use the same case to name the start and the end tag.</p>
+        <pre class="prettyprint notranslate">
+          &lt;address&gt;This is correct syntax&lt;/address&gt;
+          </pre>
+        <br>
+        <h3>Rule 2</h3>
+        <p>XML tags must be closed in an appropriate order, i.e., an XML tag opened inside another element must be closed before the outer element is closed. For example −</p>
+        <pre class="prettyprint notranslate">
+          &lt;outer_element&gt;
+             &lt;internal_element&gt;
+                This tag is closed before the outer_element
+             &lt;/internal_element&gt;
+          &lt;/outer_element&gt;
+          </pre>
+      
+      <br>
+
+
+      
+        <h1 id="xml-elements">XML - Elements</h1>
+        <p><b>XML elements</b> can be defined as building blocks of an XML. Elements can behave as containers to hold text, elements, attributes, media objects or all of these.</p>
+        <p>Each XML document contains one or more elements, the scope of which are either delimited by start and end tags, or for empty elements, by an empty-element tag.</p>
+        <br>
+        <h2>Syntax</h2>
+        <p>Following is the syntax to write an XML element −</p>
+        <pre class="prettyprint notranslate">
+          &lt;element-name attribute1 attribute2&gt;
+          ....content
+          &lt;/element-name&gt;
+          </pre>
+        <p>where,</p>
+        <ul>
+          <li>
+            <p><b>element-name</b> is the name of the element. The <i>name</i> its case in the start and end tags must match.</p>
+          </li>
+          <li>
+            <p><b>attribute1, attribute2</b> are attributes of the element separated by white spaces. An attribute defines a property of the element. It associates a name with a value, which is a string of characters. An attribute is written as −</p>
+          </li>
+        </ul>
+        <pre class="prettyprint notranslate">
+          name = "value"
+          </pre>
+        <p><i>name</i> is followed by an <i>=</i> sign and a string <i>value</i> inside double(" ") or single(' ') quotes.</p>
+        <br>
+        <h2>Empty Element</h2>
+        <p>An empty element (element with no content) has following syntax −</p>
+        <pre class="prettyprint notranslate">
+          &lt;name attribute1 attribute2.../&gt;
+          </pre>
+        <p>Following is an example of an XML document using various XML element −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?xml version = "1.0"?&gt;
+          &lt;contact-info&gt;
+             &lt;address category = "residence"&gt;
+                &lt;name&gt;Tanmay Patil&lt;/name&gt;
+                &lt;company&gt;TutorialsPoint&lt;/company&gt;
+                &lt;phone&gt;(011) 123-4567&lt;/phone&gt;
+             &lt;/address&gt;
+          &lt;/contact-info&gt;
+          </pre>
+        <br>
+        <h2>XML Elements Rules</h2>
+        <p>Following rules are required to be followed for XML elements −</p>
+        <ul>
+          <li>
+            <p>An element <i>name</i> can contain any alphanumeric characters. The only punctuation mark allowed in names are the hyphen (-), under-score (_) and period (.).</p>
+          </li>
+          <li>
+            <p>Names are case sensitive. For example, Address, address, and ADDRESS are different names.</p>
+          </li>
+          <li>
+            <p>Start and end tags of an element must be identical.</p>
+          </li>
+          <li>
+            <p>An element, which is a container, can contain text or elements as seen in the above example.</p>
+          </li>
+        </ul>
+
+      
+      <br>
+
+
+
+      
+        <h1 id="xml-attri">XML - Attributes</h1>
+        <p>This chapter describes the <b>XML attributes</b>. Attributes are part of XML elements. An element can have multiple unique attributes. Attribute gives more information about XML elements. To be more precise, they define properties of
+          elements. An XML attribute is always a name-value pair.</p>
+        <br>
+        <h2>Syntax</h2>
+        <p>An XML attribute has the following syntax −</p>
+        <pre class="prettyprint notranslate">
+          &lt;element-name attribute1 attribute2 &gt;
+          ....content..
+          &lt; /element-name&gt;
+          </pre>
+
+        <p>where <i>attribute1</i> and <i>attribute2</i> has the following form −</p>
+        <pre class="prettyprint notranslate">
+          name = "value"
+          </pre>
+        <p><i>value</i> has to be in double (" ") or single (' ') quotes. Here, <i>attribute1</i> and <i>attribute2</i> are unique attribute labels.</p>
+        <p>Attributes are used to add a unique label to an element, place the label in a category, add a Boolean flag, or otherwise associate it with some string of data. Following example demonstrates the use of attributes −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?xml version = "1.0" encoding = "UTF-8"?&gt;
+          &lt;!DOCTYPE garden [
+             &lt;!ELEMENT garden (plants)*&gt;
+             &lt;!ELEMENT plants (#PCDATA)&gt;
+             &lt;!ATTLIST plants category CDATA #REQUIRED&gt;
+          ]&gt;
+          
+          &lt;garden&gt;
+             &lt;plants category = "flowers" /&gt;
+             &lt;plants category = "shrubs"&gt;
+             &lt;/plants&gt;
+          &lt;/garden&gt;
+          </pre>
+        <p>Attributes are used to distinguish among elements of the same name, when you do not want to create a new element for every situation. Hence, the use of an attribute can add a little more detail in differentiating two or more similar
+          elements.</p>
+        <p>In the above example, we have categorized the plants by including attribute category and assigning different values to each of the elements. Hence, we have two categories of <i>plants</i>, one <i>flowers</i> and other <i>shrubs</i>. Thus,
+          we have two plant elements with different attributes.</p>
+        <p>You can also observe that we have declared this attribute at the beginning of XML.</p>
+        <br>
+        <h2>Attribute Types</h2>
+        <p>Following table lists the type of attributes −</p>
+        <br>
+        <div class="table-holder">
+          <table>
+            <tr>
+              <th>Attribute Type</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>StringType</td>
+              <td>It takes any literal string as a value. CDATA is a StringType. CDATA is character data. This means, any string of non-markup characters is a legal part of the attribute.</td>
+            </tr>
+            <tr>
+              <td>TokenizedType </td>
+              <td>
+                <p>This is a more constrained type. The validity constraints noted in the grammar are applied after the attribute value is normalized. The TokenizedType attributes are given as −</p>
+                <ul>
+                  <li>
+                    <p><b>ID</b> − It is used to specify the element as unique.</p>
+                  </li>
+                  <li>
+                    <p><b>IDREF</b> − It is used to reference an ID that has been named for another element.</p>
+                  </li>
+                  <li>
+                    <p><b>IDREFS</b> − It is used to reference all IDs of an element.</p>
+                  </li>
+                  <li>
+                    <p><b>ENTITY</b> − It indicates that the attribute will represent an external entity in the document.</p>
+                  </li>
+                  <li>
+                    <p><b>ENTITIES</b> − It indicates that the attribute will represent external entities in the document.</p>
+                  </li>
+                  <li>
+                    <p><b>NMTOKEN</b> − It is similar to CDATA with restrictions on what data can be part of the attribute.</p>
+                  </li>
+                  <li>
+                    <p><b>NMTOKENS</b> − It is similar to CDATA with restrictions on what data can be part of the attribute.</p>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>EnumeratedType</td>
+              <td>
+                <p>This has a list of predefined values in its declaration. out of which, it must assign one value. There are two types of enumerated attribute −</p>
+                <ul>
+                  <li>
+                    <p><b>NotationType</b> − It declares that an element will be referenced to a NOTATION declared somewhere else in the XML document.</p>
+                  </li>
+                  <li>
+                    <p><b>Enumeration</b> − Enumeration allows you to define a specific list of values that the attribute value must match.</p>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            >
+          </table>
+        </div>
+        <br>
+        <h2>Element Attribute Rules</h2>
+        <p>Following are the rules that need to be followed for attributes −</p>
+        <ul>
+          <li>
+            <p>An attribute name must not appear more than once in the same start-tag or empty-element tag.</p>
+          </li>
+          <li>
+            <p>An attribute must be declared in the Document Type Definition (DTD) using an Attribute-List Declaration.</p>
+          </li>
+          <li>
+            <p>Attribute values must not contain direct or indirect entity references to external entities.</p>
+          </li>
+          <li>
+            <p>The replacement text of any entity referred to directly or indirectly in an attribute value must not contain a less than sign (<b>&lt;</b>)</p>
+          </li>
+        </ul>
+      
+      <br>
+
+
+      
+        <h1 id="xml-comments">XML - Comments</h1>
+        <p>This chapter explains how comments work in XML documents. <b>XML comments</b> are similar to HTML comments. The comments are added as notes or lines for understanding the purpose of an XML code.</p>
+        <p>Comments can be used to include related links, information, and terms. They are visible only in the source code; not in the XML code. Comments may appear anywhere in XML code.</p>
+        <br>
+        <h2>Syntax</h2>
+        <p>XML comment has the following syntax −</p>
+        <pre class="prettyprint notranslate">
+          &lt;!--Your comment--&gt;
+          </pre>
+        <p>A comment starts with <b>&lt;!--</b> and ends with <b>--&gt;</b>. You can add textual notes as comments between the characters. You must not nest one comment inside the other.</p>
+        <br>
+        <h3>Example</h3>
+        <p>Following example demonstrates the use of comments in XML document −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?xml version = "1.0" encoding = "UTF-8" ?&gt;
+          &lt;!--Students grades are uploaded by months--&gt;
+          &lt;class_list&gt;
+             &lt;student&gt;
+                &lt;name&gt;Tanmay&lt;/name&gt;
+                &lt;grade&gt;A&lt;/grade&gt;
+             &lt;/student&gt;
+          &lt;/class_list&gt;
+          </pre>
+        <p>Any text between <b>&lt;!--</b> and <b>--&gt;</b> characters is considered as a comment.</p>
+        <br>
+        <h2>XML Comments Rules</h2>
+        <p>Following rules should be followed for XML comments −</p>
+        <ul>
+          <li>Comments cannot appear before XML declaration.</li>
+          <li>Comments may appear anywhere in a document.</li>
+          <li>Comments must not appear within attribute values.</li>
+          <li>Comments cannot be nested inside the other comments.</li>
+        </ul>
+
+      
+      <br>
+
+
+      
+        <h1 id="character-entities">XML - Character Entities</h1>
+        <p>This chapter describes the XML <b>Character Entities</b>. Before we understand the Character Entities, let us first understand what an XML entity is.</p>
+        <p>As put by W3 Consortium the definition of an entity is as follows −</p>
+        <blockquote>"The document entity serves as the root of the entity tree and a starting-point for an XML processor".</blockquote>
+        <p>This means, entities are the placeholders in XML. These can be declared in the document prolog or in a DTD. There are different types of entities and in this chapter we will discuss Character Entity.</p>
+        <p>Both, HTML and XML, have some symbols reserved for their use, which cannot be used as content in XML code. For example, <b>&lt;</b> and <b>&gt;</b> signs are used for opening and closing XML tags. To display these special characters, the
+          character entities are used.</p>
+        <p>There are few special characters or symbols which are not available to be typed directly from the keyboard. Character Entities can also be used to display those symbols/special characters.</p>
+        <br>
+        <h2>Types of Character Entities</h2>
+        <p>There are three types of character entities −</p>
+        <ul>
+          <li>Predefined Character Entities</li>
+          <li>Numbered Character Entities</li>
+          <li>Named Character Entities</li>
+        </ul>
+        <br>
+        <h3>Predefined Character Entities</h3>
+        <p>They are introduced to avoid the ambiguity while using some symbols. For example, an ambiguity is observed when less than ( <b>&lt;</b> ) or greater than ( <b>&gt;</b> ) symbol is used with the angle tag (<b>&lt;&gt;</b>). Character
+          entities are basically used to delimit tags in XML. Following is a list of pre-defined character entities from XML specification. These can be used to express characters without ambiguity.</p>
+        <ul>
+          <li>
+            <p>Ampersand − <b>&amp;amp;</b></p>
+          </li>
+          <li>
+            <p>Single quote − <b>&amp;apos;</b></p>
+          </li>
+          <li>
+            <p>Greater than − <b>&amp;gt;</b></p>
+          </li>
+          <li>
+            <p>Less than − <b>&amp;lt;</b></p>
+          </li>
+          <li>
+            <p>Double quote − <b>&amp;quot;</b></p>
+          </li>
+        </ul>
+        <br>
+        <h3>Numeric Character Entities</h3>
+        <p>The numeric reference is used to refer to a character entity. Numeric reference can either be in decimal or hexadecimal format. As there are thousands of numeric references available, these are a bit hard to remember. Numeric reference
+          refers to the character by its number in the Unicode character set.</p>
+        <p>General syntax for decimal numeric reference is −</p>
+        <pre class="prettyprint notranslate">
+          &# decimal number ;
+          </pre>
+        <p>General syntax for hexadecimal numeric reference is −</p>
+        <pre class="prettyprint notranslate">
+          &#x Hexadecimal number ;
+          </pre>
+        <p>The following table lists some predefined character entities with their numeric values −</p>
+        <br>
+        <div class="table-holder">
+          <table>
+            <thead>
+              <tr>
+                <th>Entity name</th>
+                <th>Character</th>
+                <th>Decimal reference</th>
+                <th>Hexadecimal reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>quot</td>
+                <td>"</td>
+                <td>&amp;#34;</td>
+                <td>&amp;#x22;</td>
+              </tr>
+              <tr>
+                <td>amp</td>
+                <td>&amp;</td>
+                <td>&amp;#38;</td>
+                <td>&amp;#x26;</td>
+              </tr>
+              <tr>
+                <td>apos</td>
+                <td>'</td>
+                <td>&amp;#39;</td>
+                <td>&amp;#x27;</td>
+              </tr>
+              <tr>
+                <td>lt</td>
+                <td>&lt;</td>
+                <td>&amp;#60;</td>
+                <td>&amp;#x3C;</td>
+              </tr>
+              <tr>
+                <td>gt</td>
+                <td>&gt;</td>
+                <td>&amp;#62;</td>
+                <td>&amp;#x3E;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br>
+        <h3>Named Character Entity</h3>
+        <p>As it is hard to remember the numeric characters, the most preferred type of character
+          entity is the named character entity. Here, each entity is identified with a name.</p>
+        <p>For example −</p>
+        <ul>
+          <li>
+            <p>'Aacute' represents capital <img style="display:inline;" src="images/namedentity_1.png"> character with acute accent.</p>
+          </li>
+          <li>
+            <p>'ugrave' represents the small <img style="display:inline;" src="images/namedentity_2.png"> with grave accent.</p>
+          </li>
+        </ul>
+
+      
+      <br>
+
+
+
+
+      
+        <h1 id="cdata">XML - CDATA Sections</h1>
+        <p>In this chapter, we will discuss <b>XML CDATA section</b>. The term CDATA means, Character Data. CDATA is defined as blocks of text that are not parsed by the parser, but are otherwise recognized as markup.</p>
+        <p>The predefined entities such as <b>&amp;lt;, &amp;gt;,</b> and <b>&amp;amp;</b> require typing and are generally difficult to read in the markup. In such cases, CDATA section can be used. By using CDATA section, you are commanding the
+          parser that the particular section of the document contains no markup and should be treated as regular text.</p>
+        <br>
+        <h2>Syntax</h2>
+        <p>Following is the syntax for CDATA section −</p>
+        <pre class="prettyprint notranslate">
+          &lt;![CDATA[
+             characters with markup
+          ]]&gt;
+          </pre>
+        <p>The above syntax is composed of three sections −</p>
+        <ul>
+          <li>
+            <p><b>CDATA Start section</b> − CDATA begins with the nine-character delimiter <b>&lt;![CDATA[</b></p>
+          </li>
+          <li>
+            <p><b>CDATA End section</b> − CDATA section ends with <b>]]&gt;</b> delimiter.</p>
+          </li>
+          <li>
+            <p><b>CData section</b> − Characters between these two enclosures are interpreted as characters, and not as markup. This section may contain markup characters (&lt;, &gt;, and &amp;), but they are ignored by the XML processor.</p>
+          </li>
+        </ul>
+        <br>
+        <h3>Example</h3>
+        <p>The following markup code shows an example of CDATA. Here, each character written inside the CDATA section is ignored by the parser.</p>
+        <pre class="prettyprint notranslate">
+        &lt;script&gt;
+   &lt;![CDATA[
+      &lt;message&gt; Welcome to TutorialsPoint &lt;/message&gt;
+   ]] &gt;
+&lt;/script &gt;
+</pre>
+        <p>In the above syntax, everything between &lt;message&gt; and &lt;/message&gt; is treated as character data and not as markup.</p>
+        <br>
+        <h2>CDATA Rules</h2>
+        <p>The given rules are required to be followed for XML CDATA −</p>
+        <ul>
+          <li>CDATA cannot contain the string "]]&gt;" anywhere in the XML document.</li>
+          <li>Nesting is not allowed in CDATA section.</li>
+        </ul>
+
+      
+      <br>
+
+
+      
+        <h1 id="whitespaces">XML - WhiteSpaces</h1>
+        <p>In this chapter, we will discuss <b>whitespace</b> handling in XML documents. Whitespace is a collection of spaces, tabs, and newlines. They are generally used to make a document more readable.</p>
+        <p>XML document contains two types of whitespaces - Significant Whitespace and Insignificant Whitespace. Both are explained below with examples.</p>
+        <br>
+        <h2>Significant Whitespace</h2>
+        <p>A significant Whitespace occurs within the element which contains text and markup present together. For example −</p>
+        <pre class="prettyprint notranslate">
+          &lt;name&gt;TanmayPatil&lt;/name&gt;
+          </pre>
+        <p>and</p>
+        <pre class="prettyprint notranslate">
+          &lt;name&gt;Tanmay Patil&lt;/name&gt;
+          </pre>
+        <p>The above two elements are different because of the space between <b>Tanmay</b> and <b>Patil</b>. Any program reading this element in an XML file is obliged to maintain the distinction.</p>
+        <br>
+        <h2>Insignificant Whitespace</h2>
+        <p>Insignificant whitespace means the space where only element content is allowed. For example −</p>
+        <pre class="prettyprint notranslate">
+          &lt;address.category = "residence"&gt;
+          </pre>
+        <p>or</p>
+        <pre class="prettyprint notranslate">
+          &lt;address....category = "..residence"&gt;
+          </pre>
+        <p>The above examples are same. Here, the space is represented by dots (.). In the above
+          example, thespace between <i>address</i> and <i>category</i> is insignificant.</p>
+        <p>A special attribute named <b>xml:space</b> may be attached to an element. This indicates that whitespace should not be removed for that element by the application. You can set this attribute to <b>default</b> or <b>preserve</b> as shown in
+          the following example −</p>
+          <pre class="prettyprint notranslate">
+            &lt;!ATTLIST address  xml:space (default|preserve) 'preserve'&gt;
+            </pre>
+        <p>Where,</p>
+        <ul>
+          <li>
+            <p>The value <b>default</b> signals that the default whitespace processing modes of an application are acceptable for this element.</p>
+          </li>
+          <li>
+            <p>The value <b>preserve</b> indicates the application to preserve all the whitespaces.</p>
+          </li>
+        </ul>
+
+
+      
+      <br>
+
+
+      
+        <h1 id="processing">XML - Processing</h1>
+        <p>This chapter describes the <b>Processing Instructions (PIs)</b>. As defined by the XML 1.0 Recommendation,</p>
+        <blockquote>"Processing instructions (PIs) allow documents to contain instructions for applications. PIs are not part of the character data of the document, but MUST be passed through to the application.</blockquote>
+        <p>Processing instructions (PIs) can be used to pass information to applications. PIs can appear anywhere in the document outside the markup. They can appear in the prolog, including the document type definition (DTD), in textual content, or
+          after the document.</p>
+        <br>
+        <h2>Syntax</h2>
+        <p>Following is the syntax of PI −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?target instructions?&gt;
+          </pre>
+          <p>Where</p>
+        <ul>
+          <li>
+            <p><b>target</b> − Identifies the application to which the instruction is directed.</p>
+          </li>
+          <li>
+            <p><b>instruction</b> − A character that describes the information for the application to process.</p>
+          </li>
+        </ul>
+        <p>A PI starts with a special tag <b>&lt;?</b> and ends with <b>?&gt;</b>. Processing of the contents ends immediately after the string <b>?&gt;</b> is encountered.</p>
+        <br>
+        <h3>Example</h3>
+        <p>PIs are rarely used. They are mostly used to link XML document to a style sheet. Following is an example −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?xml-stylesheet href = "tutorialspointstyle.css" type = "text/css"?&gt;
+          </pre>
+        <p>Here, the <i>target</i> is <i>xml-stylesheet</i>. <i>href="tutorialspointstyle.css"</i> and <i>type="text/css"</i> are <i>data</i> or <i>instructions</i> the target application will use at the time of processing the given XML document.</p>
+        <p>In this case, a browser recognizes the target by indicating that the XML should be transformed before being shown; the first attribute states that the type of the transform is XSL and the second attribute points to its location.</p>
+        <br>
+        <h2>Processing Instructions Rules</h2>
+        <p>A PI can contain any data except the combination <b>?&gt;</b>, which is interpreted as the closing delimiter. Here are two examples of valid PIs −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?welcome to pg = 10 of tutorials point?&gt;
+          
+          &lt;?welcome?&gt;
+          </pre>
+      
+      <br>
+
+
+      
+        <h1 id="encoding">XML - Encoding</h1>
+        <p><b>Encoding</b> is the process of converting unicode characters into their equivalent binary representation. When the XML processor reads an XML document, it encodes the document depending on the type of encoding. Hence, we need to specify
+          the type of encoding in the XML declaration.</p>
+        <br>
+        <h2>Encoding Types</h2>
+        <p>There are mainly two types of encoding −</p>
+        <ul>
+          <li>UTF-8</li>
+          <li>UTF-16</li>
+        </ul>
+        <p>UTF stands for <i>UCS Transformation Format</i>, and UCS itself means <i>Universal Character Set</i>. The number 8 or 16 refers to the number of bits used to represent a character. They are either 8(1 to 4 bytes) or 16(2 or 4 bytes). For
+          the documents without encoding information, UTF-8 is set by default.</p>
+        <br>
+        <h2>Syntax</h2>
+        <p>Encoding type is included in the prolog section of the XML document. The syntax for UTF-8 encoding is as follows −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?xml version = "1.0" encoding = "UTF-8" standalone = "no" ?&gt;
+          </pre>
+        <p>The syntax for UTF-16 encoding is as follows −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?xml version = "1.0" encoding = "UTF-16" standalone = "no" ?&gt;
+          </pre>
+        <br>
+        <h3>Example</h3>
+        <p>Following example shows the declaration of encoding −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?xml version = "1.0" encoding = "UTF-8" standalone = "no" ?&gt;
+          &lt;contact-info&gt;
+             &lt;name&gt;Tanmay Patil&lt;/name&gt;
+             &lt;company&gt;TutorialsPoint&lt;/company&gt;
+             &lt;phone&gt;(011) 123-4567&lt;/phone&gt;
+          &lt;/contact-info&gt;
+          </pre>
+        <p>In the above example <b>encoding="UTF-8"</b>, specifies that 8-bits are used to represent the characters. To represent 16-bit characters, <b>UTF-16</b> encoding can be used.</p>
+
+        <p>The XML files encoded with UTF-8 tend to be smaller in size than those encoded with UTF-16 format.</p>
+      
+      <br>
+
+
+      
+        <h1 id="validation">XML - Validation</h1>
+        <p><b>Validation</b> is a process by which an XML document is validated. An XML document is said to be valid if its contents match with the elements, attributes and associated document type declaration(DTD), and if the document complies with
+          the constraints expressed in it. Validation is dealt in two ways by the XML parser. They are −</p>
+        <ul>
+          <li>Well-formed XML document</li>
+          <li>Valid XML document</li>
+        </ul>
+        <br>
+        <h2>Well-formed XML Document</h2>
+        <p>An XML document is said to be <b>well-formed</b> if it adheres to the following rules −</p>
+        <ul>
+          <li>
+            <p>Non DTD XML files must use the predefined character entities for <b>amp(&amp;)</b>, <b>apos(single quote)</b>, <b>gt(&gt;)</b>, <b>lt(&lt;)</b>, <b>quot(double quote)</b>.</p>
+          </li>
+          <li>
+            <p>It must follow the ordering of the tag. i.e., the inner tag must be closed before closing the outer tag.</p>
+          </li>
+          <li>
+            <p>Each of its opening tags must have a closing tag or it must be a self ending tag.(&lt;title&gt;....&lt;/title&gt; or &lt;title/&gt;).</p>
+          </li>
+          <li>
+            <p>It must have only one attribute in a start tag, which needs to be quoted.</p>
+          </li>
+          <li>
+            <p><b>amp(&amp;)</b>, <b>apos(single quote)</b>, <b>gt(&gt;)</b>, <b>lt(&lt;)</b>, <b>quot(double quote)</b> entities other than these must be declared.</p>
+          </li>
+        </ul>
+        <br>
+        <h3>Example</h3>
+        <p>Following is an example of a well-formed XML document −</p>
+        <pre class="prettyprint notranslate">
+          &lt;?xml version = "1.0" encoding = "UTF-8" standalone = "yes" ?&gt;
+          &lt;!DOCTYPE address
+          [
+             &lt;!ELEMENT address (name,company,phone)&gt;
+             &lt;!ELEMENT name (#PCDATA)&gt;
+             &lt;!ELEMENT company (#PCDATA)&gt;
+             &lt;!ELEMENT phone (#PCDATA)&gt;
+          ]&gt;
+          
+          &lt;address&gt;
+             &lt;name&gt;Tanmay Patil&lt;/name&gt;
+             &lt;company&gt;TutorialsPoint&lt;/company&gt;
+             &lt;phone&gt;(011) 123-4567&lt;/phone&gt;
+          &lt;/address&gt;
+          </pre>
+        <p>The above example is said to be well-formed as −</p>
+        <ul>
+          <li>
+            <p>It defines the type of document. Here, the document type is <b>element</b> type.</p>
+          </li>
+          <li>
+            <p>It includes a root element named as <b>address</b>.</p>
+          </li>
+          <li>
+            <p>Each of the child elements among name, company and phone is enclosed in its self explanatory tag.</p>
+          </li>
+          <li>
+            <p>Order of the tags is maintained.</p>
+          </li>
+        </ul>
+
+
+      
+        <br>
+
+
+
+
+
+      
+        <h1 id="applications">Applications of XML</h1>
+        <ul>
+          <li><strong>Web publishing</strong>: XML allows you to create interactive pages, allows
+            the customer to customize those pages, and makes creating e-commerce applications
+            more intuitive. With XML, you store the data once and then render that content
+            for different viewers or devices based on style sheet processing using an
+            Extensible Style Language (XSL)/XSL Transformation (XSLT) processor.</li>
+
+          <li><strong>Web searching and automating Web tasks</strong>: XML defines the type of
+            information contained in a document, making it easier to return useful results
+            when searching the Web: <p>For example, using HTML to search for books authored
+              by Tom Brown is likely to return instances of the term 'brown' outside of
+              the context of author. Using XML restricts the search to the correct context
+              (for example, the information contained in the &lt;author&gt; tag) and returns
+              only the information that you want. By using XML, Web agents
+              and robots (programs that automate Web searches or other tasks) are more efficient
+              and produce more useful results.</p>
+          </li>
+
+          <li><strong>General applications</strong>: XML provides a standard method to access
+            information, making it easier for applications and devices of all kinds to
+            use, store, transmit, and display data.</li>
+
+          <li><strong>e-business applications</strong>: XML implementations make electronic data
+            interchange (EDI) more accessible for information interchange, business-to-business
+            transactions, and business-to-consumer transactions.</li>
+
+          <li><strong>Metadata applications</strong>: XML makes it easier to express metadata
+            in a portable, reusable format.</li>
+          <li><strong>Pervasive computing</strong>: XML provides portable and structured information
+            types for display on pervasive (wireless) computing devices such as personal
+            digital assistants (PDAs), cellular phones, and others. For example, WML (Wireless
+            Markup Language) and VoiceXML are currently evolving standards for describing
+            visual and speech-driven wireless device interfaces.</li>
+        </ul>
+      
+
+
+
+
+
+
+      
+
+    </div>
+
+
+
+  </div>
+</body>
+
+</html>
